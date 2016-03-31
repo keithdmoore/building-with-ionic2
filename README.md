@@ -5,7 +5,7 @@ http://keithdmoore.github.io/building-with-ionic2/
 
 Keith D. Moore
 
-kdmooreconsulting.com
+http://kdmooreconsulting.com
 
 keith@kdmooreconsulting.com
 
