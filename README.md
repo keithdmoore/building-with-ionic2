@@ -1,7 +1,13 @@
 # Building cross-platform apps with Ionic 2
 
+http://keithdmoore.github.io/building-with-ionic2/
+Keith D. Moore
+kdmooreconsulting.com
+mailto:keith@kdmooreconsulting.com
+
 The Ionic and Angular teams have been working in parallel to extend Ionic’s performance in even more exciting ways than previous versions. We’ll review the new features of Ionic 2 and walk through the process of building a practical and highly performant app, using a single codebase for multiple platforms.
 
+Original presentation given by Adam Bradley (Ionic Development Team Lead)
 - Video: https://www.youtube.com/watch?v=bAlydPwFONY
 - Slides: http://adamdbradley.github.io/building-with-ionic2/
 - V2 Docs: http://ionicframework.com/docs/v2/
