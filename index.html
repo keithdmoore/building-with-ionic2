@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Building cross-platform apps with Ionic 2</title>
+  <title>Ionic 2 Introduction</title>
 
   <meta name="description" content="The Ionic and Angular teams have been working in parallel to extend Ionic’s performance in even more exciting ways than previous versions. We’ll review the new features of Ionic 2 and walk through the process of building a practical and highly performant app, using a single codebase for multiple platforms.">
-  <meta name="author" content="Adam Bradley">
+  <meta name="author" content="Adam Bradley/Keith D. Moore">
 
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -34,21 +34,29 @@
 
       <section>
         <img src="img/ionic-sdk-landscape-white-1024.png" class="logo" width="450" style="display:block; margin:auto; margin-bottom:80px;">
-        <h1 style="font-size:56px">Building cross-platform apps with Ionic 2</h1>
+        <h1 style="font-size:56px">Ionic2 Introduction</h1>
       </section>
 
       <section>
-        <h1 class="left dark-shadow">Adam Bradley</h1>
-        <h3 class="left dark-shadow">Lead Ionic Developer</h3>
+        <h1 class="left dark-shadow" style="margin-bottom:20px">Keith D. Moore</h1>
+        <h3 class="left dark-shadow" style="margin-bottom:20px">Mobile Consultant/Architect</h3>
+        <h4 class="left dark-shadow" style="margin-bottom:0px">KD Moore Consulting</h4>
         <ul class="me dark-shadow">
-          <li style="background:url(img/marker.png) no-repeat 0 8px;">Madison, WI, USA</li>
+          <li style="background:url(img/marker.png) no-repeat 0 8px;">Dallas, TX</li>
+          <li style="background:url(img/email-icon-small.png) no-repeat 0 22px; background-size: 50px;">
+            <a href="mailto:keith@kdmooreconsulting.com" target="_blank" style="text-decoration:none">keith@kdmooreconsulting.com</a>
+          </li>
           <li style="background:url(img/twitter.png) no-repeat 0 16px;">
-            <a href="https://twitter.com/adamdbradley" target="_blank" style="text-decoration:none">@adamdbradley</a>
+            <a href="https://twitter.com/keithdmoore94" target="_blank" style="text-decoration:none">@keithdmoore94</a>
           </li>
           <li style="background:url(img/github.png) no-repeat 0 17px;">
-            <a href="https://github.com/adamdbradley" target="_blank" style="text-decoration:none">
-              adamdbradley</a>
+            <a href="https://github.com/keithdmoore" target="_blank" style="text-decoration:none">
+              keithdmoore</a>
             </li>
+          <li style="background:url(img/linkedin_logo.jpg) no-repeat 9px 24px;">
+            <a href="https://www.linkedin.com/in/keithdmoore94" target="_blank" style="text-decoration:none">
+              in/keithdmoore94</a>
+          </li>
         </ul>
       </section>
 
@@ -60,20 +68,37 @@
           width: 100%;
           height: 100%;
           opacity: 0.1; z-index: -1;"></div>
-        <h3 style="font-size:80px;">Ionic!</h3>
-        <p>Mobile apps with web tech</p>
-        <p>Focused on mobile first</p>
-        <p>Easily customized</p>
-        <p>Angular for code structure *</p>
+        <div flex>
+          <div col>
+            <h3 style="font-size:80px;">What is Ionic?</h3>
+            <p>Mobile apps with web tech (HTML5, CSS3, JS)</p>
+            <p>Focused on mobile first</p>
+            <p>Easily customized</p>
+            <p>Built using Angular</p>
+            <p>Uses Cordova/Phonegap</p>
+            </div>
+          </div>
       </section>
 
       <section data-background="img/ionic-stats.png">
-        <h3>Stats!!</h3>
-        <p>Top 40 OSS project (~20,000 stars on GitHub)</p>
-        <p>Over ONE MILLION apps built with Ionic</p>
-        <p>Ionic apps have topped app store charts</p>
-        <p>Fortune 50 co’s to YC/TechStars companies</p>
-        <p>Amazing community</p>
+        <div flex>
+          <div col>
+            <h3>How popular is Ionic?</h3>
+            <p>Top 40 Open Source projects (~23,000 stars on GitHub)</p>
+            <p>Amazing community</p>
+            <p>Ionic apps have topped app store charts</p>
+            <p>Fortune 50 co’s to Y Combinator/TechStars companies</p>
+            <p>App Showcase (<a href="http://showcase.ionicframework.com/" target="_blank">showcase.ionicframework.com</a>)</p>
+            <ul>
+              <li>Sworkit (on Shark Tank)</li>
+              <li>Rio 2016 Olympic Games</li>
+              <li>New York MTA Bus Time</li>
+              <li>Adobe Social</li>
+              <li>Meerkat Movies</li>
+              <li>Card.com</li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -114,7 +139,7 @@
             <p>Same powerful framework</p>
             <p>With lessons learned from v1</p>
             <p>Amazing performance from Angular2</p>
-            <p>Tons of new features</p>
+            <p>New features</p>
           </div>
           <div col center>
             <img src="img/ionic2.png">
@@ -171,7 +196,7 @@
 
 
 &lt;ion-content&gt;
-  {{first}} {{last}}
+  {{first}} {{middle}} {{last}}
 &lt;/ion-content&gt;</code>
           </pre>
           <pre col>
@@ -180,8 +205,9 @@
 })
 export class Profile {
   constructor() {
-    this.first = 'Biff';
-    this.last = 'Tannen';
+    this.first = 'Keith';
+    this.middle = 'D.';
+    this.last = 'Moore';
   }
 }</code>
           </pre>
@@ -190,12 +216,12 @@ export class Profile {
 
       <section>
         <div flex>
-          <pre col>
-            <code class="html">&lt;ion-nav [root]="home"&gt;&lt;/ion-nav&gt;</code>
+          <pre col><ion-app></ion-app>
+            <code class="html">&lt;ion-app&gt;&lt;/ion-app&gt;</code>
           </pre>
           <pre col>
             <code class="javascript">@App({
-  templateUrl: 'app.html'
+  template: '&lt;ion-nav [root]="rootPage"&gt;&lt;/ion-nav&gt;'
 })
 class MyApp {
   constructor() {
@@ -486,6 +512,7 @@ $colors: (
             <p>ES6 + Decorators + Types</p>
             <p>Ionic 2 / NG2 built using TS</p>
             <p>Editor Code completion</p>
+            <p>Less Code to write</p>
             <p>[optional]</p>
           </div>
           <div col center>
@@ -516,13 +543,32 @@ $colors: (
             <p>ES6/Typescript transpilation</p>
             <p>Sass compiling</p>
             <p>Cordova builds</p>
-            <p>Webpack bundling</p>
-            <p>Scaffolding/Architecture</p>
-            <p>Recommended best practices</p>
+            <p>Scaffolding</p>
+            <p>Resource Generator</p>
             <p>Crosswalk</p>
           </div>
           <div col center>
             <img src="img/cli.png">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div flex>
+          <div col>
+            <h3>Ionic.io (Beta)</h3>
+            <p>Package (iOS and Android)</p>
+            <p>Deploy to Ionic View</p>
+            <p>Deploy to App</p>
+            <p>Push Notifications</p>
+            <p>Authentication</p>
+            <p>OAuth2 (FB, Twitter, etc)</p>
+            <p>Ionic Lab</p>
+            <p>Ionic Creator</p>
+            <p>Analytics</p>
+          </div>
+          <div col center>
+            <img src="img/ionic-io.png">
           </div>
         </div>
       </section>
@@ -545,27 +591,47 @@ $colors: (
       <section>
         <div flex>
           <div col>
-            <h3>Want to try it out now?</h3>
-            <p>We want your feedback</p>
-            <p><code><a href="http://ionic.io/2" style="font-size:48px; text-decoration:underline;margin-top:36px;color:#4e8ef7;">ionic.io/2</a></code></p>
-          </div>
-          <div col center>
-            <img src="img/tryit.png">
+             <h3 style="top:10px">Is Ionic2 ready?</h3>
+             <p>Angular2 Beta released December 15, 2015</p>
+             <p>Ionic2 Beta released in February 10, 2016</p>
+             <p>Angular2 Release Candidate rumored to be May 2016</p>
+             <p>What's your risk tolerance?</p>
+             <p>What does your app do?</p>
           </div>
         </div>
       </section>
 
       <section>
-        <h3>What's Next!</h3>
-        <p>Alpha released today!</p>
-        <p>Web Worker Support</p>
-        <p>Staying 'Nsync with Angular2</p>
-        <p>Add even more to ionic.io services</p>
+        <div flex>
+          <div col>
+            <h3>What's Next?</h3>
+            <p>Release Candidate soon after Angular2 RC</p>
+            <p>Web Worker Support</p>
+            <p>Server Side Rendering</p>
+            <p>Build time template compilation</p>
+            <p>Staying 'Nsync with Angular2</p>
+            <p>Full support for ionic.io services</p>
+            <p>More tooling (testing, constants, etc)</p>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3><code style="font-size: 80px">&lt;/html&gt;</code></h3>
-        <p><a href="https://twitter.com/adamdbradley" target="_blank">@adamdbradley</a></p>
+        <h3>Links</h3>
+        <div style="text-align: left;text-transform:none; text-decoration: underline">
+          <ul>
+            <li><a href="https://angular.io/docs/ts/latest/" target="_blank">angular.io/docs/ts/latest</a></li>
+            <li><a href="http://learnangular2.com/" target="_blank">learnangular2.com</a></li>
+            <li><a href="http://typescriptlang.org" target="_blank">typescriptlang.org</a></li>
+            <li><a href="http://ionicframework.com/" target="_blank">ionicframework.com</a></li>
+            <li><a href="http://ionicframework.com/docs/v2/" target="_blank">ionicframework.com/docs/v2</a></li>
+            <li><a href="http://blog.ionic.io/" target="_blank">blog.ionic.io</a></li>
+            <li><a href="http://ionic.io/discover" target="_blank">ionic.io/discover</a></li>
+            <li><a href="https://forum.ionicframework.com/" target="_blank">forum.ionicframework.com</a></li>
+            <li><a href="https://github.com/driftyco/ionic/milestones" target="_blank">github.com/driftyco/ionic/milestones</a></li>
+            <li><a href="http://thenewstack.io/google-preps-angular-2-final-release/" target="_blank">thenewstack.io/google-preps-angular-2-final-release</a></li>
+          </ul>
+        </div>
       </section>
 
     </div>
